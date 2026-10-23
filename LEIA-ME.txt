@@ -1,0 +1,13 @@
+CAROL HARDER — REVISÃO EDITORIAL
+
+1. Extraia este ZIP em uma pasta.
+2. Abra carol-harder-preview.html no navegador para navegar na proposta.
+3. Mantenha carol-harder-privacidade.html ao lado da prévia.
+4. Carol-Harder-site-completo-desktop.png e Carol-Harder-mobile.png são os prints completos.
+5. Comparativo-antes-depois.jpg compara as duas versões reais.
+6. projeto-editavel.zip contém os arquivos-fonte, testes e instruções de manutenção.
+7. VALIDACAO.md e os relatórios Lighthouse registram os testes e métricas efetivamente executados.
+
+A prévia contém fontes, fotos e scripts embutidos. Não depende de instalar o projeto para revisão visual. O protocolo de arquivos locais não pôde ser testado no navegador restrito do ambiente; a prévia foi verificada via HTTP, incluindo o fallback sem JavaScript.
+
+O site não foi implantado em domínio de produção. Permanecem pendentes domínio, confirmação do canal LGPD e revisão final CFP/LGPD. Não foram instalados rastreadores ou ferramentas publicitárias.

@@ -1,7 +1,8 @@
-REVISÃO CAROL HARDER — 26/10/2026
+CAROL HARDER — REVISÃO DOS QUATRO AJUSTES
 
-Extraia este ZIP. Abra carol-harder-preview.html no navegador e mantenha carol-harder-privacidade.html na mesma pasta. As fontes e imagens estão embutidas.
+Extraia o ZIP e abra carol-harder-preview.html no navegador. Role a página para conferir as entradas sutis. Elas respeitam a preferência do sistema por movimento reduzido.
+Mantenha carol-harder-privacidade.html na mesma pasta. Fontes, fotografias e scripts estão embutidos.
 
-Os PNGs são os prints completos atuais de desktop e mobile. Os detalhes da apresentação e do encerramento facilitam conferir as alterações solicitadas. projeto-editavel.zip contém o projeto com as quatro alterações pontuais de arquivos. AJUSTES-20261026.txt registra o escopo e os testes desta entrega.
+Os PNGs são as capturas completas atualizadas; Detalhe-encerramento.png permite avaliar a nova cor e o símbolo do WhatsApp. projeto-editavel.zip contém os fontes, e ALTERACOES-movimento-20261026.txt registra exatamente o escopo e os testes executados.
 
-Nenhuma implantação em domínio de produção foi realizada.
+O site não foi implantado em domínio de produção.

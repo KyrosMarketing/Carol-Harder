@@ -1,0 +1,18 @@
+CAROL HARDER — MOVIMENTO E CTAs — 26/10/2026
+
+Somente os quatro ajustes solicitados:
+1. Entradas ao rolar: fade-in e subida de 12 px por 600 ms, uma vez por elemento, sem biblioteca nova. A primeira dobra permanece sem animação de entrada. Conteúdo permanece visível sem JavaScript. A preferência por movimento reduzido impede as entradas e cancela imediatamente as já em execução; foco por teclado também cancela a entrada do bloco focalizado.
+2. Ícones dos dois CTAs Conversar com a Carol: símbolo vetorial preenchido do Simple Icons, visualmente ampliado para 28,6 px dentro do espaço existente. Dimensões dos botões, destinos e textos preservados.
+3. Frase Psicoterapia online para mulheres adultas removida da primeira dobra, sem substituição.
+4. Frase Há espaço para a sua história alterada para a terracota oficial #A5491C; fundo sálvia preservado. Contraste 3,29:1, adequado aos tamanhos de título utilizados.
+
+Três arquivos do produto foram alterados: index.html, src/style.css e src/main.js. Nos testes, foi incluída a espera pelo fim das entradas antes da auditoria estática e adicionadas duas verificações de movimento. As seções e os demais textos, fotos, dados, navegação, configurações, dependências e arquivos de identidade permanecem como antes. A lógica de interações existente de main.js foi preservada integralmente; o observador de entradas foi acrescentado ao final.
+
+Validação: build concluído e 13 testes passaram. Cobertura nas larguras 360, 390, 768, 1024 e 1440 px, acessibilidade no estado final, navegação/FAQ/WhatsApp, preferência de movimento reduzido, cancelamento de entrada em execução, entrada uma única vez e ausência de alteração na altura da página. Revisão visual desktop e mobile. Prévia HTML exportada verificada com fotos, fontes, ícones, entradas e diálogo sem recursos externos.
+
+Para conferir as animações, abra carol-harder-preview.html e role a página. Mantenha carol-harder-privacidade.html ao lado. Os PNGs registram o resultado final estático.
+
+Lighthouse não foi repetido nesta alteração pontual. Relatórios anteriores datados de 23/10 no projeto correspondem à revisão daquela data. O site não foi implantado em domínio de produção.
+
+Backup anterior: /workspace/backups/movimento-ctas-20261026.
+Ícone: https://raw.githubusercontent.com/simple-icons/simple-icons/develop/icons/whatsapp.svg

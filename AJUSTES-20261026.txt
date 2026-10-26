@@ -1,0 +1,13 @@
+CAROL HARDER — AJUSTES PONTUAIS — 26/10/2026
+
+1. Segunda seção: ano de formação e menção a Psicologia Clínica removidos. Nome Carol Harder destacado na coluna existente.
+2. Legenda “Presença, mesmo a distância” removida, sem substituição.
+3. Encerramento: fundo sálvia oficial #B8C5BC e cores de texto ajustadas ao contraste.
+4. Botões Conversar com a Carol: ícone de WhatsApp, peso médio, cantos discretos e feedback de interação. Destinos e rótulos mantidos.
+5. Nome e CRP destacados nas identificações da página e da privacidade. CRP em 16 px e peso médio.
+
+Somente index.html, src/style.css, src/privacy-content.html e privacidade.html foram alterados. As mudanças de privacidade são exclusivamente de destaque tipográfico do nome e do CRP; seu texto não foi reescrito. Cabeçalho, seções não mencionadas, fotos, scripts, dependências, configuração e testes foram preservados. A versão anterior foi copiada para /workspace/backups/ajustes-pontuais-20261026.
+
+Validação: build concluído, 11 testes existentes passaram, revisão visual desktop/mobile. Verificações de acessibilidade e layout nas larguras 360, 390, 768, 1024 e 1440 px passaram; sem overflow. Exportação HTML verificada com fotos, fontes, ícones e diálogo de privacidade, sem recursos remotos. Lighthouse não foi repetido para estas alterações pontuais: relatórios e métricas de 23/10 nos documentos anteriores correspondem à revisão daquela data.
+
+O site não foi implantado em produção; esta entrega contém somente arquivos para revisão.

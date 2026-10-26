@@ -1,13 +1,7 @@
-CAROL HARDER — REVISÃO EDITORIAL
+REVISÃO CAROL HARDER — 26/10/2026
 
-1. Extraia este ZIP em uma pasta.
-2. Abra carol-harder-preview.html no navegador para navegar na proposta.
-3. Mantenha carol-harder-privacidade.html ao lado da prévia.
-4. Carol-Harder-site-completo-desktop.png e Carol-Harder-mobile.png são os prints completos.
-5. Comparativo-antes-depois.jpg compara as duas versões reais.
-6. projeto-editavel.zip contém os arquivos-fonte, testes e instruções de manutenção.
-7. VALIDACAO.md e os relatórios Lighthouse registram os testes e métricas efetivamente executados.
+Extraia este ZIP. Abra carol-harder-preview.html no navegador e mantenha carol-harder-privacidade.html na mesma pasta. As fontes e imagens estão embutidas.
 
-A prévia contém fontes, fotos e scripts embutidos. Não depende de instalar o projeto para revisão visual. O protocolo de arquivos locais não pôde ser testado no navegador restrito do ambiente; a prévia foi verificada via HTTP, incluindo o fallback sem JavaScript.
+Os PNGs são os prints completos atuais de desktop e mobile. Os detalhes da apresentação e do encerramento facilitam conferir as alterações solicitadas. projeto-editavel.zip contém o projeto com as quatro alterações pontuais de arquivos. AJUSTES-20261026.txt registra o escopo e os testes desta entrega.
 
-O site não foi implantado em domínio de produção. Permanecem pendentes domínio, confirmação do canal LGPD e revisão final CFP/LGPD. Não foram instalados rastreadores ou ferramentas publicitárias.
+Nenhuma implantação em domínio de produção foi realizada.

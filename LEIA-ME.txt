@@ -1,5 +1,5 @@
-CAROL HARDER — HERO REFINADA — 27/10/2026
+CAROL HARDER — LOGO NA PRÉVIA DE COMPARTILHAMENTO — 27/10/2026
 
-Abra carol-harder-preview.html mantendo carol-harder-privacidade.html na mesma pasta. Fotografias, fontes e módulos embutidos. Role nos dois sentidos para conferir as entradas.
+carol-harder-preview.html contém a landing com imagem de compartilhamento configurada. Mantenha carol-harder-privacidade.html na mesma pasta ao abrir a prévia local. O logo de compartilhamento é carol-harder-compartilhamento-v1.png e usa a versão circular oficial sobre fundo creme.
 
-Hero-desktop.png mostra a primeira seção atualizada. O print desktop completo também foi atualizado. O layout mobile foi preservado. projeto-editavel.zip contém o projeto atual; REFINAMENTO-HERO-20261027.txt registra escopo e validação.
+projeto-editavel.zip contém o código atualizado. COMPARTILHAMENTO-20261027.txt explica o escopo, a hospedagem da imagem e a validação. O título, a descrição e todo o conteúdo visual da página foram preservados; os prints anteriores continuam representando o layout atual.

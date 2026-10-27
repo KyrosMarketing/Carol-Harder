@@ -1,0 +1,15 @@
+IMAGEM DE COMPARTILHAMENTO — 27/10/2026
+
+Código-fonte: f856f8f9b8bb0d8dd0f5a209f64837fab1a950ec
+Produção Cloudflare: ajustes-pontuais-20261026-5d13776.
+
+A prévia de compartilhamento usa a versão circular oficial da logo, sem redesenho, sobre o fundo creme #FEFAF1. O card PNG foi renderizado a partir do asset oficial em HTML, 800 × 800 px, RGB opaco, 73.126 bytes. Título e descrição existentes foram preservados.
+
+A landing inclui no HTML inicial og:image, og:image:secure_url, tipo PNG, largura, altura e texto alternativo. O domínio confirmado https://carolharder.com.br preenche site.url. As marcações funcionam sem JavaScript. O corpo HTML da página exportada permanece idêntico ao anterior.
+
+URL da imagem: https://raw.githubusercontent.com/KyrosMarketing/Carol-Harder/ajustes-pontuais-20261026-5d13776/carol-harder-compartilhamento-v1.png
+A URL pública HTTPS externa é intencional: o pipeline atual do Cloudflare publica HTML com recursos embutidos; não foi possível confirmar que ele copia novos arquivos estáticos para a raiz do domínio. A imagem também acompanha a branch de produção na raiz e o código-fonte em public/images/. O nome versionado evita substituir bytes sob a mesma chave de cache em futuras trocas da arte.
+
+Escopo do código: src/site.config.js, vite.config.js e o novo PNG. Sem alterações de layout, conteúdo visível, CSS, scripts de interação, botões, retratos ou animações. Build e export aprovados; 14 testes passaram. HTML gerado e exportado conferidos com parser, mantendo as metatags únicas e o título/descrição originais. PNG revisado visualmente, sem transparência e com dimensões válidas.
+
+O WhatsApp mantém cache próprio de prévias; mensagens antigas não são reescritas por esta alteração. A implantação no Cloudflare e a coleta final pelo WhatsApp dependem dos serviços externos; a imagem e os arquivos publicados no GitHub serão conferidos após o envio.

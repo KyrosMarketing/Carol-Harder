@@ -392,6 +392,14 @@ dialog::backdrop { background: color-mix(in srgb, var(--ink) 60%, transparent); 
   .privacy-page h1 { font-size: 43px; }
   .privacy-page-footer { flex-direction: column; gap: 12px; font-size: 13px; }
 }
+/* Balance the desktop cover while keeping tablet/mobile composition unchanged. */
+@media (min-width: 900px) {
+  .hero { padding-top: 40px; padding-bottom: 44px; }
+  .hero-heading { margin-bottom: 32px; }
+  .portrait-hero { aspect-ratio: 5 / 4; }
+  .portrait-hero > img { object-position: 50% 8%; }
+  .hero-copy { align-self: center; padding-top: 0; padding-bottom: 40px; }
+}
 /* Only offscreen elements are prepared. Without JS, all content stays visible. */
 @media screen and (prefers-reduced-motion: no-preference) {
   .scroll-reveal-pending:not(:focus-within) { opacity: 0; transform: translate3d(0, 20px, 0); }

@@ -1,3 +1,4 @@
-CAROL HARDER — LINK NA LOGO KYROS — 27/10/2026
+ESPACAMENTO KYROS — 27/10/2026
 
-A logo KYROS no rodapé agora abre https://kyrosmarketing.com.br em nova aba. Nenhuma mudança visual. Abra carol-harder-preview.html com carol-harder-privacidade.html na mesma pasta. projeto-editavel.zip contém o código atual. LINK-KYROS-20261027.txt registra a alteração e a verificação. Prints existentes preservados, pois a aparência é idêntica.
+Fonte: 474e0446166862e36a4183a57e7a84c85a5a6609
+Unica alteracao: gap da assinatura reduzido de 12 para 8 px. Logo original, alinhamento vertical, tamanho, link e demais elementos preservados. Build/export e conferencias de geometria em 390 e 1440 px aprovados. Nenhuma outra alteracao no produto.

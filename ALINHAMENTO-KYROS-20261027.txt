@@ -1,0 +1,10 @@
+ALINHAMENTO DO CRÉDITO — 27/10/2026
+
+Código-fonte: 59aeea5381193b2471acf1ac200ab6668e9542de
+Produção Cloudflare: ajustes-pontuais-20261026-5d13776.
+
+Única alteração de produto: acrescentada a regra .site-credit > span com transform translateY(7px) para centralizar opticamente Desenvolvido por em relação ao desenho visível da logo KYROS. Nenhum outro elemento foi movido ou alterado. Logo original, tamanho e posição preservados; texto, HTML, cores, espaçamentos, animações e demais seções intactos. A altura da linha e do documento não mudou.
+
+Verificações: build/export aprovados. HTML exportado conferido em 390 e 1440 px, com comparação geométrica antes/depois; somente o texto muda 7 px. Sem overflow, erros ou violações de acessibilidade no rodapé. Centros visuais de texto e logo conferidos nas capturas, diferença de 0,25 px em ambos os tamanhos. PNG original continua com SHA256 0c162a49e4e052c0089b97933dc1ab76819844ef6837d9677ee47bb278c6d6bb. Sem nova execução da suíte completa ou medição de desempenho por se tratar deste ajuste isolado.
+
+A implantação no Cloudflare depende da integração externa; envio ao GitHub não comprova conclusão da implantação.

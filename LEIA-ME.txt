@@ -1,5 +1,5 @@
-CAROL HARDER — CRÉDITO KYROS — 27/10/2026
+CAROL HARDER — LOGO KYROS SEM FUNDO — 27/10/2026
 
-Abra carol-harder-preview.html mantendo carol-harder-privacidade.html na mesma pasta. A assinatura Desenvolvido por KYROS está no final do rodapé, com nome branco em fundo azul escuro, à direita no desktop e centralizado no celular.
+Abra carol-harder-preview.html mantendo carol-harder-privacidade.html na mesma pasta. A assinatura Desenvolvido por mantém seu texto e posição, agora com a imagem da logo KYROS preta e transparente, sem a caixa escura anterior.
 
-Rodape-KYROS-desktop.png e Rodape-KYROS-mobile.png mostram o detalhe; os prints completos e projeto-editavel.zip também foram atualizados. CREDITO-KYROS-20261027.txt descreve escopo e validação. As miniaturas de compartilhamento permanecem como na entrega anterior.
+Rodape-KYROS-desktop.png e Rodape-KYROS-mobile.png mostram a alteração. Prints completos e projeto-editavel.zip atualizados. kyros-logo-transparent.png é o asset de transparência aplicado. LOGO-KYROS-TRANSPARENTE-20261027.txt registra o escopo e a validação desta mudança única.

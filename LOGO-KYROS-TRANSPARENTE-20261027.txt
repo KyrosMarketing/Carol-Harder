@@ -1,0 +1,12 @@
+LOGO KYROS SEM FUNDO — 27/10/2026
+
+Código-fonte: cb545fb59732fce140759aebe0c10e9ba94efa4a
+Produção Cloudflare: ajustes-pontuais-20261026-5d13776.
+
+Substituída apenas a assinatura tipográfica em caixa escura pela logo KYROS preparada com fundo transparente a partir da imagem anexada. PNG RGBA 2172 × 724 px, 213.501 bytes, transparência alpha real, cantos totalmente transparentes. Marca preta sobre o fundo creme existente da página. O processo de preparação de transparência usou a ferramenta de edição de imagem; o arquivo entregue foi aplicado sem novas alterações de pixels.
+
+Escopo: troca do span KYROS por img com alt KYROS em index.html, substituição apenas da regra .kyros-wordmark em src/style.css e novo public/images/kyros-logo-transparent.png. A caixa não tem mais fundo, padding ou borda. Área da imagem 110 × 34 px com object-fit contain; altura anterior de 34 px preservada. O texto Desenvolvido por, alinhamentos desktop/mobile e todos os demais elementos foram mantidos.
+
+Validação: build/export aprovados; seis testes existentes aprovados, cobrindo responsividade/acessibilidade em 360, 390, 768, 1024 e 1440 px e contato/privacidade. HTML exportado inspecionado em desktop e celular, com a imagem decodificada, embutida, sem caixa de fundo, sem overflow ou erros. Alpha do PNG conferido; capturas do rodapé revisadas sobre o fundo creme. Prints completos atualizados após carregar as fotografias e a nova logo. Sem alterações nos metadados de compartilhamento ou animações e sem nova medição de desempenho.
+
+A conclusão da implantação no Cloudflare permanece independente da confirmação do envio ao GitHub.

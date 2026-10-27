@@ -1,5 +1,5 @@
-CAROL HARDER — PRÉVIA COMPACTA — 27/10/2026
+CAROL HARDER — CRÉDITO KYROS — 27/10/2026
 
-carol-harder-preview.html indica a nova imagem de compartilhamento de 200 × 200 px: carol-harder-compartilhamento-v2.png. O WhatsApp escolhe a apresentação final; a imagem menor favorece o formato compacto. Título, descrição e layout preservados.
+Abra carol-harder-preview.html mantendo carol-harder-privacidade.html na mesma pasta. A assinatura Desenvolvido por KYROS está no final do rodapé, com nome branco em fundo azul escuro, à direita no desktop e centralizado no celular.
 
-Mantenha carol-harder-privacidade.html na mesma pasta ao abrir a prévia local. projeto-editavel.zip contém o código atualizado. PREVIA-COMPACTA-20261027.txt registra escopo, limites e validação.
+Rodape-KYROS-desktop.png e Rodape-KYROS-mobile.png mostram o detalhe; os prints completos e projeto-editavel.zip também foram atualizados. CREDITO-KYROS-20261027.txt descreve escopo e validação. As miniaturas de compartilhamento permanecem como na entrega anterior.

@@ -1,0 +1,12 @@
+CRÉDITO DE PRODUÇÃO KYROS — 27/10/2026
+
+Código-fonte: 324b2679ea1e28b589383913673c4bd8b0c5eb49
+Produção Cloudflare: ajustes-pontuais-20261026-5d13776.
+
+Acrescentada ao final do rodapé a assinatura Desenvolvido por KYROS. Nome em texto, conforme a alternativa autorizada, sobre um pequeno fundo azul escuro #0E1721 e em branco para manter a legibilidade, seguindo a referência enviada. Não se trata de uma reprodução vetorial da arte anexada. Assinatura alinhada à direita no desktop e centralizada abaixo de 700 px.
+
+Alterações de produto: um parágrafo em index.html e três regras exclusivas em src/style.css. Conteúdos e links anteriores do rodapé preservados. Demais seções, metadados de compartilhamento, imagens da Carol, configurações e animações não foram alterados. Nenhum link de agência foi inventado; o crédito é texto e não contém rastreamento.
+
+Validação: build/export aprovados; seis testes existentes aprovados, incluindo responsividade e acessibilidade em 360, 390, 768, 1024 e 1440 px e contato/privacidade. HTML exportado inspecionado em 390 e 1440 px, sem overflow, erros ou dependências de imagem adicionais. Capturas desktop/mobile do rodapé revisadas visualmente. Não foi executada nova medição de desempenho.
+
+Rodape-KYROS-desktop.png e Rodape-KYROS-mobile.png mostram a assinatura. Prints completos e ZIP editável também atualizados. A conclusão da implantação no Cloudflare será independente da confirmação do envio ao GitHub.

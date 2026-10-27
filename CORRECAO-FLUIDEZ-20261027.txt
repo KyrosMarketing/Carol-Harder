@@ -1,0 +1,14 @@
+CORREÇÃO DE FLUIDEZ — 27/10/2026
+
+Código-fonte: fb2f59ee5b40c51b3f805e688610d64ec77b76de
+Branch de produção Cloudflare: ajustes-pontuais-20261026-5d13776.
+
+Entradas de textos, retratos e blocos menores são preparadas antes de alcançarem a área visível, evitando o salto de um elemento já visível para transparência zero. Subida de 20 px em 650 ms, sem atraso adicional, com transform e opacity. Margens distintas para entrada e preparação impedem reinícios repetidos próximos à borda. A entrada volta a acontecer depois de o elemento sair completamente da tela, tanto ao descer quanto ao subir.
+
+A rolagem nativa continua livre. Foco de teclado revela o conteúdo imediatamente. Preferência por movimento reduzido desativa as entradas e restaura todo o conteúdo, inclusive quando alterada durante uma animação. Sem JavaScript e na impressão, o conteúdo permanece disponível.
+
+Escopo do produto: somente src/main.js e a regra de preparação ao fim de src/style.css. Primeira seção, layout, textos, fotos, cores, CTAs e demais funcionalidades preservados. README registra a branch correta; testes atualizados para o comportamento solicitado.
+
+Validação: build aprovado; 14 testes aprovados. HTML exportado validado por HTTP em 1440 e 390 px com rolagem pela roda do mouse nos dois sentidos, sem conteúdo oculto na área visível, sem alteração da altura do documento, sem erros ou requisições externas e com privacidade funcionando. Documentos e métricas anteriores mantêm suas datas; Lighthouse não foi repetido.
+
+A redução da foto e o preenchimento do espaço da primeira seção são sugestões para avaliação, sem alteração aplicada ao layout.

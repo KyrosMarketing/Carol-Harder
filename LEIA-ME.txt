@@ -1,8 +1,5 @@
-CAROL HARDER — REVISÃO DOS QUATRO AJUSTES
+CAROL HARDER — CORREÇÃO DE FLUIDEZ — 27/10/2026
 
-Extraia o ZIP e abra carol-harder-preview.html no navegador. Role a página para conferir as entradas sutis. Elas respeitam a preferência do sistema por movimento reduzido.
-Mantenha carol-harder-privacidade.html na mesma pasta. Fontes, fotografias e scripts estão embutidos.
+Abra carol-harder-preview.html e mantenha carol-harder-privacidade.html na mesma pasta. Fontes, fotografias e módulos estão embutidos. Role a página para baixo e para cima para conferir as entradas.
 
-Os PNGs são as capturas completas atualizadas; Detalhe-encerramento.png permite avaliar a nova cor e o símbolo do WhatsApp. projeto-editavel.zip contém os fontes, e ALTERACOES-movimento-20261026.txt registra exatamente o escopo e os testes executados.
-
-O site não foi implantado em domínio de produção.
+projeto-editavel.zip contém o código atualizado. CORRECAO-FLUIDEZ-20261027.txt registra o escopo e a validação. Os PNGs mostram a mesma composição visual, que foi preservada. As sugestões para a primeira seção ainda não foram aplicadas.

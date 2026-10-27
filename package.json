@@ -1,0 +1,22 @@
+{
+  "name": "carol-harder",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite --host 0.0.0.0",
+    "build": "vite build",
+    "preview": "vite preview --host 0.0.0.0",
+    "test": "playwright test",
+    "check:publication": "node scripts/check-publication.mjs",
+    "export:preview": "npm run build && node scripts/export-preview.mjs"
+  },
+  "dependencies": {
+    "@fontsource/rubik": "5.3.0"
+  },
+  "devDependencies": {
+    "@axe-core/playwright": "4.14.0",
+    "@playwright/test": "1.64.1",
+    "vite": "8.3.5"
+  }
+}

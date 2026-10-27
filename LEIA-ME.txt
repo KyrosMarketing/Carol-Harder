@@ -1,5 +1,5 @@
-CAROL HARDER — LOGO KYROS SEM FUNDO — 27/10/2026
+CAROL HARDER — LOGO KYROS ORIGINAL — 27/10/2026
 
-Abra carol-harder-preview.html mantendo carol-harder-privacidade.html na mesma pasta. A assinatura Desenvolvido por mantém seu texto e posição, agora com a imagem da logo KYROS preta e transparente, sem a caixa escura anterior.
+Abra carol-harder-preview.html mantendo carol-harder-privacidade.html na mesma pasta. A logo do rodapé agora usa o PNG original enviado em ZIP, sem alteração do arquivo; apenas o tamanho de exibição é ajustado no CSS.
 
-Rodape-KYROS-desktop.png e Rodape-KYROS-mobile.png mostram a alteração. Prints completos e projeto-editavel.zip atualizados. kyros-logo-transparent.png é o asset de transparência aplicado. LOGO-KYROS-TRANSPARENTE-20261027.txt registra o escopo e a validação desta mudança única.
+kyros-logo-transparent.png é byte a byte o mesmo PNG original do usuário. KYROS-ORIGINAL-20261027.txt registra SHA256, escopo e verificações. Rodape-KYROS-desktop.png, Rodape-KYROS-mobile.png, prints completos e projeto-editavel.zip foram atualizados.

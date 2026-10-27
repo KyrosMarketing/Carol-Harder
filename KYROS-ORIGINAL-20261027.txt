@@ -1,0 +1,17 @@
+LOGO KYROS — ARQUIVO ORIGINAL INTACTO — 27/10/2026
+
+Código-fonte: b66ea755f9e25c89b463e32c99d1b7913cfc012e
+Produção Cloudflare: ajustes-pontuais-20261026-5d13776.
+
+Fonte: LOGO KYROS PRETA (SEM FUNDO).png, extraído do ZIP enviado pelo usuário. O PNG original foi copiado diretamente, sem processamento de imagem, recriação, recorte de pixels, mudança de cor, compressão ou redimensionamento do arquivo. A versão processada anterior foi substituída pelo original.
+
+PNG original: 1254 × 1254 px, RGBA, 85.723 bytes.
+SHA256 do original e do asset aplicado: 0c162a49e4e052c0089b97933dc1ab76819844ef6837d9677ee47bb278c6d6bb
+
+Somente o tamanho/enquadramento de exibição é controlado por CSS: área 120 × 34 px, escala uniforme com object-fit cover e object-position 50% 44%, para aproveitar as margens transparentes do arquivo quadrado. Foi conferido matematicamente que a totalidade dos pixels não transparentes está contida na área visível; nenhum traço da logo é cortado. O próprio arquivo permanece intacto. width/height do HTML atualizados para as dimensões reais do original.
+
+Escopo: troca do PNG, atributos dimensionais dessa única imagem e sua regra .kyros-wordmark. Texto Desenvolvido por, restante do rodapé, outras seções, metadados, imagens da Carol e animações preservados.
+
+Validação: build/export aprovados; seis testes existentes aprovados, incluindo responsividade/acessibilidade em 360, 390, 768, 1024 e 1440 px e contato/privacidade. Em 390 e 1440 px, PNG embutido no HTML exportado decodificado e comparado byte a byte com o original extraído do ZIP; dimensões naturais corretas, fundo transparente, sem overflow/erros. Logo original e capturas do rodapé revisadas visualmente. Prints completos atualizados com as imagens carregadas. Sem nova medição de desempenho.
+
+A conclusão da implantação no Cloudflare permanece independente da confirmação do envio ao GitHub.

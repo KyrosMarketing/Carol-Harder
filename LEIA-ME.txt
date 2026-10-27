@@ -1,5 +1,5 @@
-CAROL HARDER — CORREÇÃO DE FLUIDEZ — 27/10/2026
+CAROL HARDER — HERO REFINADA — 27/10/2026
 
-Abra carol-harder-preview.html e mantenha carol-harder-privacidade.html na mesma pasta. Fontes, fotografias e módulos estão embutidos. Role a página para baixo e para cima para conferir as entradas.
+Abra carol-harder-preview.html mantendo carol-harder-privacidade.html na mesma pasta. Fotografias, fontes e módulos embutidos. Role nos dois sentidos para conferir as entradas.
 
-projeto-editavel.zip contém o código atualizado. CORRECAO-FLUIDEZ-20261027.txt registra o escopo e a validação. Os PNGs mostram a mesma composição visual, que foi preservada. As sugestões para a primeira seção ainda não foram aplicadas.
+Hero-desktop.png mostra a primeira seção atualizada. O print desktop completo também foi atualizado. O layout mobile foi preservado. projeto-editavel.zip contém o projeto atual; REFINAMENTO-HERO-20261027.txt registra escopo e validação.

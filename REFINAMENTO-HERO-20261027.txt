@@ -1,0 +1,12 @@
+REFINAMENTO PONTUAL DA HERO — 27/10/2026
+
+Código-fonte: 4ac86aa7538bdbfaa6d99ae92836269853356017
+Produção Cloudflare: ajustes-pontuais-20261026-5d13776.
+
+Somente src/style.css mudou no produto, com regras restritas à Hero em larguras a partir de 900 px. Foto 21,6% mais baixa, mantendo a largura e o arquivo original. Posição vertical da imagem compensada para preservar o enquadramento do rosto. Coluna de textos e botões centralizada em relação à foto. Espaçamentos da Hero ajustados com moderação.
+
+Em desktop de 1440 px, a imagem passou de 722,8 a 566,9 px e a Hero de 1125,3 a 943,4 px. Não foram acrescentados textos, cards ou elementos. Tipografia, cores, botões, conteúdo e animações preservados. Nenhuma outra seção foi modificada.
+
+Validação: build aprovado e 14 testes aprovados. Geometria comparada em 360, 390, 699, 768, 899, 900, 1024, 1280, 1440 e 1920 px. Mobile/tablet abaixo de 900 px mantêm as medidas anteriores. Outras seções preservam suas dimensões e distâncias relativas após a Hero. HTML exportado conferido em 390, 768, 1024 e 1440 px, rolando para baixo e para cima: nenhum elemento da Hero permanece oculto na área visível, a altura do documento é estável e não há erros nem recursos externos. Captura desktop revisada visualmente para confirmar rosto, nome e CRP.
+
+Não houve nova medição Lighthouse. Relatórios e notas anteriores mantêm suas datas.

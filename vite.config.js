@@ -38,8 +38,8 @@ export default defineConfig({
           'og:image': site.sharingImage,
           'og:image:secure_url': site.sharingImage,
           'og:image:type': 'image/png',
-          'og:image:width': '800',
-          'og:image:height': '800',
+          'og:image:width': '200',
+          'og:image:height': '200',
           'og:image:alt': 'Logotipo oficial de Carol Harder — psicóloga',
         })) tags.push({ tag: 'meta', attrs: { property, content }, injectTo: 'head' });
       }

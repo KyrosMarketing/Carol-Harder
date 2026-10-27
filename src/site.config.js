@@ -7,7 +7,7 @@ export const site = {
   instagram: '', // URL HTTPS oficial, depois de confirmada.
   url: 'https://carolharder.com.br', // Domínio confirmado e já utilizado pela profissional.
   // Asset público também incluído na exportação; URL HTTPS funciona no pipeline HTML atual.
-  sharingImage: 'https://raw.githubusercontent.com/KyrosMarketing/Carol-Harder/ajustes-pontuais-20261026-5d13776/carol-harder-compartilhamento-v1.png',
+  sharingImage: 'https://raw.githubusercontent.com/KyrosMarketing/Carol-Harder/ajustes-pontuais-20261026-5d13776/carol-harder-compartilhamento-v2.png',
   privacyContact: '', // E-mail profissional para questões de privacidade.
   portraits: { hero: '/images/carol-hero-960.webp', about: '/images/carol-about-800.webp' },
   portraitSrcsets: {

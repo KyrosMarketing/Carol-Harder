@@ -392,6 +392,10 @@ dialog::backdrop { background: color-mix(in srgb, var(--ink) 60%, transparent); 
   .privacy-page h1 { font-size: 43px; }
   .privacy-page-footer { flex-direction: column; gap: 12px; font-size: 13px; }
 }
+/* Only offscreen elements are prepared. Without JS, all content stays visible. */
+@media screen and (prefers-reduced-motion: no-preference) {
+  .scroll-reveal-pending:not(:focus-within) { opacity: 0; transform: translate3d(0, 20px, 0); }
+}
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
   *, *::before, *::after, details::details-content { animation: none !important; transition: none !important; }

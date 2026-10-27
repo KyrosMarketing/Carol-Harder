@@ -31,7 +31,9 @@ Abra `artifacts/carol-harder-preview.html` em um navegador; o arquivo também po
 
 ## Cloudflare Pages
 
-Para uma integração com este repositório Git, use a branch `main` (a branch padrão atual também recebe este código), diretório raiz do projeto vazio, comando de build `npm run build` e diretório de saída `dist`. Configure `NODE_VERSION=24.19.0` no ambiente de build.
+A produção existente acompanha a branch `ajustes-pontuais-20261026-5d13776`, conforme o painel do Cloudflare compartilhado em 27/10/2026. Essa branch recebe as prévias HTML com recursos embutidos e o ZIP editável, no mesmo formato das implantações que já funcionaram. Atualize essa branch para disparar a implantação de produção; `main` é a branch de código-fonte e, na configuração atual, gera apenas prévias.
+
+Para uma integração própria a partir do código-fonte de `main`, use diretório raiz do projeto vazio, comando de build `npm run build` e diretório de saída `dist`. Configure `NODE_VERSION=24.19.0` no ambiente de build.
 
 O Cloudflare precisa executar o build: o `index.html` da raiz é o código-fonte e usa o Vite para incluir estilos, fontes, fotos e links de contato. Não publique a raiz do repositório como arquivos estáticos. Em um projeto criado por upload direto, envie o conteúdo de `dist/` em uma nova implantação; um push no GitHub só dispara atualizações quando existe uma integração Git configurada.
 

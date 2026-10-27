@@ -32,6 +32,8 @@ for (const width of [360, 390, 768, 1024, 1440]) {
     expect(accessibility.violations).toEqual([]);
     expect(errors).toEqual([]); expect(responses).toEqual([]); expect(external).toEqual([]);
     fs.mkdirSync('artifacts', { recursive: true });
+    // A full-page still must show content that normally enters during scrolling.
+    await page.emulateMedia({ reducedMotion: 'reduce' });
     await page.screenshot({ path: `artifacts/carol-${width}.png`, fullPage: true });
   });
 }
@@ -113,29 +115,58 @@ test('privacy page and restrained sticky header', async ({ page }) => {
   expect(visibleText.join(' ')).not.toMatch(/a confirmar|aguardando|versão para revisão|placeholder/i);
 });
 
-test('scroll entrances fade and rise once without changing layout', async ({ page }) => {
+test('text and photo entrances progress smoothly and repeat on return without changing layout', async ({ page }) => {
   await page.emulateMedia({ reducedMotion: 'no-preference' });
+  await page.setViewportSize({ width: 1440, height: 900 });
   await page.goto('/');
-  const target = page.locator('.about-heading');
+  const target = page.locator('.about-heading h2');
+  const photo = page.locator('.about-visual');
   const documentHeight = await page.evaluate(() => document.documentElement.scrollHeight);
+  await expect(target).toHaveClass(/scroll-reveal-pending/);
+  await expect(target).toHaveCSS('opacity', '0');
   await target.evaluate(el => el.scrollIntoView({ block: 'center', behavior: 'instant' }));
   await expect.poll(() => target.evaluate(el => el.getAnimations().some(animation => animation.playState === 'running'))).toBe(true);
-  const entering = await target.evaluate(el => ({ opacity: Number(getComputedStyle(el).opacity), transform: getComputedStyle(el).transform }));
-  expect(entering.opacity).toBeLessThan(1);
-  expect(entering.transform).not.toBe('none');
-  await target.evaluate(el => Promise.all(el.getAnimations().map(animation => animation.finished)));
+  const samples = await target.evaluate(async el => {
+    const animation = el.getAnimations()[0];
+    const values = [];
+    for (let i = 0; i < 10; i++) {
+      window.scrollBy({ top: i % 2 ? -2 : 2, behavior: 'instant' });
+      await new Promise(requestAnimationFrame);
+      const style = getComputedStyle(el);
+      values.push({ opacity: Number(style.opacity), y: new DOMMatrixReadOnly(style.transform).m42, sameAnimation: el.getAnimations()[0] === animation });
+    }
+    await animation.finished;
+    return values;
+  });
+  expect(samples[0].opacity).toBeLessThan(1);
+  expect(samples[0].y).toBeGreaterThan(0);
+  for (let i = 1; i < samples.length; i++) {
+    expect(samples[i].sameAnimation).toBe(true);
+    expect(samples[i].opacity).toBeGreaterThanOrEqual(samples[i - 1].opacity);
+    expect(samples[i].y).toBeLessThanOrEqual(samples[i - 1].y);
+  }
   await expect(target).toHaveCSS('opacity', '1');
   await expect(target).toHaveCSS('transform', 'none');
+  await expect(photo).toHaveCSS('opacity', '1');
   expect(await page.evaluate(() => document.documentElement.scrollHeight)).toBe(documentHeight);
+  // Completely leaving the viewport arms another entrance in either scroll direction.
   await page.evaluate(() => window.scrollTo({ top: 0, behavior: 'instant' }));
+  await expect(target).toHaveClass(/scroll-reveal-pending/);
   await target.evaluate(el => el.scrollIntoView({ block: 'center', behavior: 'instant' }));
-  await page.evaluate(() => new Promise(resolve => requestAnimationFrame(() => requestAnimationFrame(resolve))));
-  expect(await target.evaluate(el => el.getAnimations().length)).toBe(0);
+  await expect.poll(() => target.evaluate(el => el.getAnimations().some(animation => animation.playState === 'running'))).toBe(true);
+  await target.evaluate(el => Promise.all(el.getAnimations().map(animation => animation.finished.catch(() => {}))));
+  await page.locator('#contato').evaluate(el => el.scrollIntoView({ behavior: 'instant' }));
+  await expect(target).toHaveClass(/scroll-reveal-pending/);
+  await target.evaluate(el => el.scrollIntoView({ block: 'center', behavior: 'instant' }));
+  await expect.poll(() => target.evaluate(el => el.getAnimations().some(animation => animation.playState === 'running'))).toBe(true);
+  await target.evaluate(el => Promise.all(el.getAnimations().map(animation => animation.finished.catch(() => {}))));
+  await expect(target).toHaveCSS('opacity', '1');
+  expect(await page.evaluate(() => document.documentElement.scrollHeight)).toBe(documentHeight);
 });
 test('reduced motion skips entrances and cancels an entrance already running', async ({ page }) => {
   await page.emulateMedia({ reducedMotion: 'reduce' });
   await page.goto('/');
-  const target = page.locator('.about-heading');
+  const target = page.locator('.about-heading h2');
   await target.evaluate(el => el.scrollIntoView({ block: 'center', behavior: 'instant' }));
   await page.evaluate(() => new Promise(resolve => requestAnimationFrame(() => requestAnimationFrame(resolve))));
   expect(await target.evaluate(el => el.getAnimations().length)).toBe(0);
@@ -148,4 +179,19 @@ test('reduced motion skips entrances and cancels an entrance already running', a
   await expect.poll(() => target.evaluate(el => el.getAnimations().length)).toBe(0);
   await expect(target).toHaveCSS('opacity', '1');
   await expect(target).toHaveCSS('transform', 'none');
+  await expect(page.locator('.scroll-reveal-pending')).toHaveCount(0);
+});
+
+test('entrance starts before the viewport edge and focus reveals content immediately', async ({ page }) => {
+  await page.emulateMedia({ reducedMotion: 'no-preference' });
+  await page.goto('/');
+  const target = page.locator('.about-heading h2');
+  await target.evaluate(el => window.scrollTo({ top: window.scrollY + el.getBoundingClientRect().top - window.innerHeight - 10, behavior: 'instant' }));
+  await expect.poll(() => target.evaluate(el => el.getAnimations().some(animation => animation.playState === 'running'))).toBe(true);
+  expect(await target.evaluate(el => el.getBoundingClientRect().top)).toBeGreaterThan(await page.evaluate(() => window.innerHeight));
+  const link = page.locator('.about-copy > .text-link');
+  await link.focus();
+  await expect(link).toHaveCSS('opacity', '1');
+  await expect(link).not.toHaveClass(/scroll-reveal-pending/);
+  expect(await link.evaluate(el => el.getAnimations().length)).toBe(0);
 });

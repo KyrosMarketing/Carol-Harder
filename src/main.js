@@ -73,55 +73,79 @@ if (/^https:\/\/(www\.)?instagram\.com\//.test(site.instagram)) {
 }
 document.querySelector('#year').textContent = new Date().getFullYear();
 
-// Scroll entrances are progressive: no CSS pre-hiding, layout changes or dependencies.
-// Leave the initial viewport untouched and reveal each later block only once.
+// Prepare offscreen elements before they enter, leaving native scrolling untouched.
+// Separate entrance/reset margins prevent repeated restarts near a viewport edge.
 if ('IntersectionObserver' in window && typeof Element.prototype.animate === 'function') {
   const motionPreference = matchMedia('(prefers-reduced-motion: reduce)');
   const revealSelectors = [
-    '.about-heading', '.about-facts', '.about-copy', '.about-visual',
-    '.women-inner > .eyebrow', '.women-inner > h2', '.women-bottom',
-    '.approach-identity', '.approach-main', '.care-heading', '.steps > li',
-    '.faq-heading', '.faq-list', '.contact-inner', '.footer-main',
+    '.hero-heading > *', '.hero-visual', '.hero-copy > p',
+    '.about-heading > *', '.about-identity', '.about-facts dl',
+    '.about-copy > *', '.about-visual',
+    '.women-inner > .eyebrow', '.women-inner > h2', '.women-aside', '.women-copy > *',
+    '.approach-identity > *', '.approach-main > h2', '.approach-main > p',
+    '.approach-relations > div', '.care-heading > *', '.steps > li',
+    '.faq-heading > *', '.faq-list > details', '.contact-inner > *', '.footer-main > *',
   ];
-  const pendingReveals = new Set([...document.querySelectorAll(revealSelectors.join(', '))]
-    .filter(element => element.getBoundingClientRect().top >= window.innerHeight));
-  const activeReveals = new Set();
-  const observer = new IntersectionObserver(entries => {
-    for (const entry of entries) {
-      if (!entry.isIntersecting || !pendingReveals.has(entry.target)) continue;
-      pendingReveals.delete(entry.target);
-      observer.unobserve(entry.target);
-      if (motionPreference.matches || entry.target.contains(document.activeElement)) continue;
-      const animation = entry.target.animate([
-        { opacity: 0, transform: 'translateY(12px)' },
-        { opacity: 1, transform: 'translateY(0)' },
-      ], { duration: 600, easing: 'cubic-bezier(.22, 1, .36, 1)' });
-      activeReveals.add(animation);
-      animation.finished.catch(() => {}).finally(() => activeReveals.delete(animation));
-    }
-  }, { threshold: 0.12, rootMargin: '0px 0px -4% 0px' });
+  const elements = [...document.querySelectorAll(revealSelectors.join(', '))];
+  const activeReveals = new Map();
+  const pendingClass = 'scroll-reveal-pending';
+  const hasFocus = element => element.contains(document.activeElement);
 
-  function observePendingReveals() {
-    for (const element of pendingReveals) {
-      if (element.getBoundingClientRect().top < window.innerHeight) pendingReveals.delete(element);
-      else observer.observe(element);
+  function showImmediately(element) {
+    element.classList.remove(pendingClass);
+    activeReveals.get(element)?.cancel();
+    activeReveals.delete(element);
+  }
+
+  const entranceObserver = new IntersectionObserver(entries => {
+    for (const entry of entries) {
+      const element = entry.target;
+      if (!entry.isIntersecting || !element.classList.contains(pendingClass)) continue;
+      element.classList.remove(pendingClass);
+      if (motionPreference.matches || hasFocus(element)) continue;
+      const animation = element.animate([
+        { opacity: 0, transform: 'translate3d(0, 20px, 0)' },
+        { opacity: 1, transform: 'translate3d(0, 0, 0)' },
+      ], { duration: 650, easing: 'cubic-bezier(.2, .65, .3, 1)' });
+      activeReveals.set(element, animation);
+      animation.finished.catch(() => {}).finally(() => {
+        if (activeReveals.get(element) === animation) activeReveals.delete(element);
+      });
+    }
+  }, { threshold: 0, rootMargin: '48px 0px' });
+
+  const resetObserver = new IntersectionObserver(entries => {
+    for (const entry of entries) {
+      if (entry.isIntersecting || motionPreference.matches || hasFocus(entry.target)) continue;
+      showImmediately(entry.target);
+      entry.target.classList.add(pendingClass);
+    }
+  }, { threshold: 0, rootMargin: '160px 0px' });
+
+  function startEntrances() {
+    for (const element of elements) {
+      const rect = element.getBoundingClientRect();
+      // Do not hide content that is already visible on load, navigation or restoration.
+      if (rect.top > window.innerHeight + 48 || rect.bottom < -48) {
+        if (!hasFocus(element)) element.classList.add(pendingClass);
+      }
+      entranceObserver.observe(element);
+      resetObserver.observe(element);
     }
   }
-  if (!motionPreference.matches) observePendingReveals();
+  function stopEntrances() {
+    entranceObserver.disconnect();
+    resetObserver.disconnect();
+    for (const element of elements) showImmediately(element);
+  }
+  if (!motionPreference.matches) startEntrances();
   motionPreference.addEventListener('change', () => {
-    if (motionPreference.matches) {
-      observer.disconnect();
-      for (const animation of activeReveals) animation.cancel();
-      activeReveals.clear();
-    } else observePendingReveals();
+    if (motionPreference.matches) stopEntrances();
+    else startEntrances();
   });
-  // A keyboard user never has to wait for an entrance to interact with a link.
   document.addEventListener('focusin', event => {
-    for (const animation of activeReveals) {
-      if (animation.effect.target.contains(event.target)) {
-        animation.cancel();
-        activeReveals.delete(animation);
-      }
-    }
+    for (const element of elements) if (element.contains(event.target)) showImmediately(element);
   });
+  window.addEventListener('beforeprint', stopEntrances);
+  window.addEventListener('afterprint', () => { if (!motionPreference.matches) startEntrances(); });
 }

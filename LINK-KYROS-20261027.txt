@@ -1,0 +1,10 @@
+HIPERLINK NA LOGO KYROS — 27/10/2026
+
+Código-fonte: 8c2530209df22c9654b5dca252c8d343aa788b21
+Produção Cloudflare: ajustes-pontuais-20261026-5d13776.
+
+Única alteração de produto: imagem da logo KYROS envolvida por um link para https://kyrosmarketing.com.br. Abre em nova aba, com noopener noreferrer e nome acessível informando a nova aba. Texto, logo original, CSS, tamanho, alinhamento e demais elementos preservados.
+
+Verificações: build/export aprovados. Em 390 e 1440 px, capturas da assinatura com e sem o link foram idênticas, e a geometria permaneceu igual. Clique no celular e ativação por teclado no desktop abriram exatamente o destino informado em nova aba. A navegação de destino foi interceptada para testar o hiperlink sem depender da disponibilidade do serviço externo. CSS e todos os demais arquivos de produto permanecem inalterados. A página de privacidade exportada também permaneceu byte a byte igual. Sem nova execução da suíte completa por ser uma alteração isolada de hiperlink.
+
+Os prints existentes continuam representando a aparência atual. A conclusão da implantação no Cloudflare permanece independente da confirmação de envio ao GitHub.

@@ -1,3 +1,3 @@
-CAROL HARDER - ALINHAMENTO DO CREDITO - 27/10/2026
+CAROL HARDER — LINK NA LOGO KYROS — 27/10/2026
 
-Apenas Desenvolvido por foi alinhado verticalmente com a logo original, com uma regra CSS. Alinhamento-KYROS.png mostra o detalhe. HTMLs, prints e ZIP editavel atualizados. A logo original permanece intacta. Consulte ALINHAMENTO-KYROS-20261027.txt para escopo e verificacoes.
+A logo KYROS no rodapé agora abre https://kyrosmarketing.com.br em nova aba. Nenhuma mudança visual. Abra carol-harder-preview.html com carol-harder-privacidade.html na mesma pasta. projeto-editavel.zip contém o código atual. LINK-KYROS-20261027.txt registra a alteração e a verificação. Prints existentes preservados, pois a aparência é idêntica.

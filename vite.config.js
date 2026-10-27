@@ -33,7 +33,16 @@ export default defineConfig({
         tags.push({ tag: 'link', attrs: { rel: 'canonical', href: escape(site.url + (isPrivacy ? '/privacidade.html' : '/')) }, injectTo: 'head' });
         tags.push({ tag: 'meta', attrs: { property: 'og:url', content: site.url + (isPrivacy ? '/privacidade.html' : '/') }, injectTo: 'head' });
       }
-      if (site.url && site.portraits.hero) tags.push({ tag: 'meta', attrs: { property: 'og:image', content: new URL(site.portraits.hero, site.url).href }, injectTo: 'head' });
+      if (!isPrivacy && site.sharingImage) {
+        for (const [property, content] of Object.entries({
+          'og:image': site.sharingImage,
+          'og:image:secure_url': site.sharingImage,
+          'og:image:type': 'image/png',
+          'og:image:width': '800',
+          'og:image:height': '800',
+          'og:image:alt': 'Logotipo oficial de Carol Harder — psicóloga',
+        })) tags.push({ tag: 'meta', attrs: { property, content }, injectTo: 'head' });
+      }
       tags.push({ tag: 'script', attrs: { type: 'application/ld+json' }, children: JSON.stringify({ '@context': 'https://schema.org', '@type': 'Person', name: site.fullName || site.name, jobTitle: 'Psicóloga', knowsAbout: 'Terapia Cognitivo-Comportamental', ...(site.url ? { url: site.url } : {}) }).replaceAll('<', '\\u003c'), injectTo: 'head' });
       return { html, tags };
     },

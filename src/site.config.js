@@ -5,7 +5,9 @@ export const site = {
   crp: '08/19247',
   whatsapp: '5541988640026', // Formato internacional: somente dígitos, com código de país e DDD.
   instagram: '', // URL HTTPS oficial, depois de confirmada.
-  url: '', // Domínio HTTPS definitivo, sem barra final.
+  url: 'https://carolharder.com.br', // Domínio confirmado e já utilizado pela profissional.
+  // Asset público também incluído na exportação; URL HTTPS funciona no pipeline HTML atual.
+  sharingImage: 'https://raw.githubusercontent.com/KyrosMarketing/Carol-Harder/ajustes-pontuais-20261026-5d13776/carol-harder-compartilhamento-v1.png',
   privacyContact: '', // E-mail profissional para questões de privacidade.
   portraits: { hero: '/images/carol-hero-960.webp', about: '/images/carol-about-800.webp' },
   portraitSrcsets: {

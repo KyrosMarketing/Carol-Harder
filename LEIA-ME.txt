@@ -1,5 +1,5 @@
-CAROL HARDER — LOGO NA PRÉVIA DE COMPARTILHAMENTO — 27/10/2026
+CAROL HARDER — PRÉVIA COMPACTA — 27/10/2026
 
-carol-harder-preview.html contém a landing com imagem de compartilhamento configurada. Mantenha carol-harder-privacidade.html na mesma pasta ao abrir a prévia local. O logo de compartilhamento é carol-harder-compartilhamento-v1.png e usa a versão circular oficial sobre fundo creme.
+carol-harder-preview.html indica a nova imagem de compartilhamento de 200 × 200 px: carol-harder-compartilhamento-v2.png. O WhatsApp escolhe a apresentação final; a imagem menor favorece o formato compacto. Título, descrição e layout preservados.
 
-projeto-editavel.zip contém o código atualizado. COMPARTILHAMENTO-20261027.txt explica o escopo, a hospedagem da imagem e a validação. O título, a descrição e todo o conteúdo visual da página foram preservados; os prints anteriores continuam representando o layout atual.
+Mantenha carol-harder-privacidade.html na mesma pasta ao abrir a prévia local. projeto-editavel.zip contém o código atualizado. PREVIA-COMPACTA-20261027.txt registra escopo, limites e validação.

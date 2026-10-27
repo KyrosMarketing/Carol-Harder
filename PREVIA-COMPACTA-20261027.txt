@@ -1,0 +1,17 @@
+PRÉVIA COMPACTA DE COMPARTILHAMENTO — 27/10/2026
+
+Código-fonte: 8834532b1bd4d9d9c4c7c1e6d6693d0e441593dd
+Produção Cloudflare: ajustes-pontuais-20261026-5d13776.
+
+A imagem compartilhada foi reduzida de 800 para 200 × 200 px para favorecer uma miniatura compacta ao lado do texto. O WhatsApp decide o formato final; esta alteração não garante uma apresentação específica em todos os aparelhos ou versões do aplicativo. Não há metatag que imponha a posição da imagem na interface do WhatsApp.
+
+Novo PNG: 200 × 200 px, RGB opaco, 9.086 bytes. A mesma versão circular oficial da marca foi renderizada sobre #FEFAF1, sem redesenho ou novos elementos. O HTML declara og:image e og:image:secure_url com a nova URL e dimensões reais 200 × 200. A versão anterior continua disponível, mas não é mais indicada no HTML.
+
+URL pública da nova imagem: https://raw.githubusercontent.com/KyrosMarketing/Carol-Harder/ajustes-pontuais-20261026-5d13776/carol-harder-compartilhamento-v2.png
+A hospedagem pública da imagem acompanha o formato da entrega anterior, compatível com o pipeline atual do Cloudflare. O arquivo também está na raiz da branch de produção e em public/images/ no código-fonte.
+
+O título, a descrição e todo o corpo HTML visível permanecem idênticos à entrega anterior. Nenhuma mudança em CSS, layout, fotografias, botões ou animações.
+
+Validação: build e export aprovados; dois testes existentes de SEO e contato/privacidade aprovados. Metadados de dist/index.html e do HTML exportado conferidos, incluindo unicidade de og:image, URL versionada, HTTPS, título/descrição preservados e dimensões correspondentes ao PNG. Imagem revisada visualmente. Acesso público ao novo PNG e arquivos do GitHub serão verificados após o envio. Não houve nova medição de desempenho.
+
+Após a implantação, pode ser necessário testar uma nova mensagem com https://carolharder.com.br/?v=miniatura2 para solicitar uma prévia nova. Mensagens antigas e caches do WhatsApp podem manter a imagem anterior. A implantação no Cloudflare e a apresentação final no WhatsApp não foram confirmadas por estes testes locais.

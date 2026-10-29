@@ -1,0 +1,20 @@
+PÁGINA DE LINKS DA BIO — 29/10/2026
+
+Código-fonte: 6aae214b419e810a6439d6d4d35e9f6f55cc8228
+Produção: ajustes-pontuais-20261026-5d13776.
+URL prevista: https://carolharder.com.br/links
+
+Nova página HTML estática /links com paleta oficial, Rubik local e logo original intacta. Identificação Carol Harder, Psicóloga Clínica, CRP 08/19247. Botões de WhatsApp com a mensagem solicitada, site e Instagram oficial confirmado pelo usuário. Rodapé com atendimento online e horário confirmado. Metadados específicos, canonical /links e noindex, follow. Animações sutis com movimento reduzido respeitado. Sem fotos, dependências novas, GA4/GTM, cookies, armazenamento ou coleta.
+
+Eventos locais preparados, uma vez por ativação: click_whatsapp_bio, click_site_bio e click_instagram_bio. Evento DOM carol:bio-click; source instagram_bio e page_path /links. Não enviam dados para terceiros. O usuário escolheu deixar preparado sem coleta.
+
+Validação: npm run export:preview concluído; 21 testes Playwright aprovados, incluindo os 14 da landing page e 7 da nova página. Responsivo e axe WCAG AA em 320, 360, 390, 768 e 1440 px. Três botões visíveis sem rolagem em 360x640 e 390x844. Acesso direto e reload /links no build Vite, navegação sem JavaScript, destinos, foco, movimento reduzido e ausência de coleta aprovados. HTML autônomo validado separadamente com logo e fontes embutidas; sem erros ou requisições externas; eventos únicos. Comparação visual antes/depois da landing page em 390 px: pixels idênticos. Código e estilos existentes da LP byte a byte preservados.
+
+Arquivos desta entrega: links.html autônomo; Links-bio-mobile.png e Links-bio-desktop.png; projeto-editavel.zip com a entrada Vite adicional e testes.
+
+Os HTMLs publicados anteriormente (carol-harder-preview.html e carol-harder-privacidade.html) permanecem byte a byte intactos nesta branch. A política de indexação existente da landing page não foi modificada.
+
+CLOUDFLARE
+links.html precisa entrar no diretório de saída publicado. O Vite do projeto editável já o inclui em dist/. Cloudflare Pages fornece a URL limpa /links para links.html. Se o build atual copia somente os dois HTMLs nomeados, inclua também links.html no MESMO diretório de saída. Nenhuma configuração de DNS, domínio, e-mail ou Cloudflare foi alterada. Os valores atuais de comando de build e diretório de saída foram solicitados para confirmar a inclusão da nova página.
+
+O ambiente não consegue acessar carolharder.com.br, carol-harder.pages.dev ou Instagram: o proxy de saída bloqueia essas conexões antes de alcançar os serviços. Perfil do Instagram confirmado diretamente pelo usuário. Não se conclui indisponibilidade do site a partir desse bloqueio. O envio ao GitHub não comprova conclusão do deploy; verificação da rota no domínio público permanece pendente.

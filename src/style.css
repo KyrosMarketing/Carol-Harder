@@ -43,6 +43,7 @@ em { font-style: normal; font-weight: 400; color: var(--terracotta); }
 .header.is-scrolled { border-color: var(--line); }
 .header-inner { height: 88px; display: flex; align-items: center; justify-content: space-between; gap: 32px; }
 .brand { display: block; flex-shrink: 0; width: 195px; transition: width .25s ease; }
+.header:not(.privacy-header) .brand img { clip-path: inset(0 0 35% 0); }
 .is-scrolled .brand { width: 176px; }
 .header nav { display: flex; align-items: center; gap: clamp(25px, 3vw, 44px); font-size: 14px; }
 .header nav a { min-height: 44px; display: inline-flex; align-items: center; position: relative; }

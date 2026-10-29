@@ -1,5 +1,8 @@
-CAROL HARDER — SUBSTITUIÇÕES — 29/10/2026
+LOGO DO RODAPÉ NO CELULAR — 29/10/2026
 
-Abra carol-harder-preview.html com carol-harder-privacidade.html na mesma pasta. Nome abaixo da foto e assinaturas da segunda seção removidos; subtítulo da abordagem aplicado; rodapé com logo circular original e contato organizado. WhatsApp: +55 (41) 98864-0026. E-mail: contato@carolharder.com.br. Atendimento: segunda a sexta, das 8h às 19h.
+Fonte: 25691f051d4cb939448efe365e312eeb1e97d2b8
+Única alteração: na regra mobile existente, até 699 px, largura de .footer-brand reduzida de 195 para 160 px e justify-self center. Centralização horizontal na tela do celular. A logo original não foi editada, e o restante do rodapé e do site não mudou.
 
-Rodape-atualizado-desktop.png e Rodape-atualizado-mobile.png mostram a versão atual. Segunda-dobra-desktop.png mostra o subtítulo. Prints completos e projeto-editavel.zip atualizados. Consulte SUBSTITUICOES-20261029.txt para escopo e validação.
+Build/export aprovados. Conferência em 360, 390, 430 e 699 px: logo com 160 px e centro igual ao centro da tela, sem overflow. Em 700 e 768 px, logo mantém 180 px; em 1024 px, 185 px; em 1440 px, 210 px. Alinhamentos de tablet/desktop preservados. Todos os demais arquivos de produto permanecem byte a byte iguais. Sem nova execução da suíte completa ou medição de desempenho para esta alteração isolada.
+
+Envio ao GitHub não comprova a conclusão da implantação no Cloudflare.

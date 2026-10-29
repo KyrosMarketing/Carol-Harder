@@ -2,14 +2,25 @@ import { defineConfig } from 'vite';
 import { readFileSync } from 'node:fs';
 import { resolve } from 'node:path';
 import { site, publicationIssues, whatsappUrl } from './src/site.config.js';
+import { bio } from './src/links.config.js';
 const ready = publicationIssues.length === 0;
 const escape = s => s.replaceAll('&', '&amp;').replaceAll('"', '&quot;').replaceAll('<', '&lt;');
 export default defineConfig({
-  build: { rollupOptions: { input: { main: resolve('index.html'), privacy: resolve('privacidade.html') } } },
+  build: { rollupOptions: { input: { main: resolve('index.html'), privacy: resolve('privacidade.html'), links: resolve('links.html') } } },
   plugins: [{
     name: 'site-metadata',
     transformIndexHtml(html, context) {
       const isPrivacy = context.filename.endsWith('privacidade.html');
+      const isLinks = context.filename.endsWith('links.html');
+      if (isLinks) {
+        const replacements = {
+          BIO_NAME: site.fullName || site.name,
+          BIO_CRP: site.crp,
+          BIO_WHATSAPP: `https://wa.me/${site.whatsapp}?text=${encodeURIComponent(bio.whatsappMessage)}`,
+          BIO_INSTAGRAM: bio.instagram,
+        };
+        for (const [key, value] of Object.entries(replacements)) html = html.replaceAll(`%${key}%`, escape(value));
+      }
       let policy = readFileSync(resolve('src/privacy-content.html'), 'utf8');
       if (!isPrivacy) policy = policy.replaceAll('<h2>', '<h3>').replaceAll('</h2>', '</h3>');
       html = html.replace('<!-- privacy-policy -->', policy);
@@ -28,10 +39,11 @@ export default defineConfig({
         const image = `<div class="portrait portrait-${key} has-photo" data-portrait="${key}"><img src="${escape(src)}"${responsive} alt="${hero ? 'Carol Harder, psicóloga clínica' : 'Carol Harder em seu retrato profissional de apresentação'}" width="${width}" height="${height}" ${hero ? 'fetchpriority="high" loading="eager"' : 'loading="lazy"'} decoding="async"></div>`;
         html = html.replace(new RegExp(`<!-- portrait:${key} -->[\\s\\S]*?<!-- /portrait:${key} -->`), image);
       }
-      const tags = [{ tag: 'meta', attrs: { name: 'robots', content: ready ? 'index, follow' : 'noindex, nofollow' }, injectTo: 'head' }];
+      const tags = [{ tag: 'meta', attrs: { name: 'robots', content: isLinks ? 'noindex, follow' : ready ? 'index, follow' : 'noindex, nofollow' }, injectTo: 'head' }];
       if (site.url) {
-        tags.push({ tag: 'link', attrs: { rel: 'canonical', href: escape(site.url + (isPrivacy ? '/privacidade.html' : '/')) }, injectTo: 'head' });
-        tags.push({ tag: 'meta', attrs: { property: 'og:url', content: site.url + (isPrivacy ? '/privacidade.html' : '/') }, injectTo: 'head' });
+        const pagePath = isLinks ? '/links' : isPrivacy ? '/privacidade.html' : '/';
+        tags.push({ tag: 'link', attrs: { rel: 'canonical', href: escape(site.url + pagePath) }, injectTo: 'head' });
+        tags.push({ tag: 'meta', attrs: { property: 'og:url', content: site.url + pagePath }, injectTo: 'head' });
       }
       if (!isPrivacy && site.sharingImage) {
         for (const [property, content] of Object.entries({

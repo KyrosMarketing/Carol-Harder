@@ -29,6 +29,16 @@ Abra `artifacts/carol-harder-preview.html` em um navegador; o arquivo também po
 
 `dist/` contém a landing page, a página de privacidade e os recursos que podem ser hospedados em um servidor estático. Não depende de backend. Nenhuma publicação foi realizada.
 
+## Links da bio — `/links`
+
+`links.html`, `src/links.css`, `src/links.js` e `src/links.config.js` compõem a página independente da bio. O Vite inclui `links.html` em `dist/`. No Cloudflare Pages, o HTML recebe a URL limpa `/links`, inclusive em acesso direto e atualização, sem roteador ou configuração de DNS. O exportador também gera `artifacts/links.html` autônomo, com a logo original e as fontes embutidas.
+
+Na branch de artefatos de produção, `links.html` precisa acompanhar os dois HTMLs existentes na pasta efetivamente publicada pelo build. Se o comando atual copia somente arquivos nomeados, inclua também `links.html` nessa cópia. Não substitua o comando atual sem conferir as configurações do Cloudflare.
+
+O perfil `psicologa.carol.harder` foi confirmado pelo usuário em 29/10/2026. Os dados profissionais vêm da configuração existente no build; a mensagem do WhatsApp da bio é independente da mensagem da landing page. Nenhum conteúdo da landing page foi alterado para adicionar essa rota. A bio usa `noindex, follow`, sem mudar a política de indexação da página principal.
+
+Conforme escolha do usuário, não há coleta nem GA4/GTM instalado. Cada ativação de um link emite **um evento local** `carol:bio-click` em `window`, com `detail.event_name` (`click_whatsapp_bio`, `click_site_bio` ou `click_instagram_bio`), `page_path: '/links'`, `source: 'instagram_bio'`, `link_url` e `link_text`. O evento não envia dados nem grava cookies/storage. Uma futura integração deve ouvir esse evento uma vez e encaminhá-lo somente após a configuração de analytics e consentimento apropriada; não adicione um segundo listener de cliques para o mesmo envio.
+
 ## Cloudflare Pages
 
 A produção existente acompanha a branch `ajustes-pontuais-20261026-5d13776`, conforme o painel do Cloudflare compartilhado em 27/10/2026. Essa branch recebe as prévias HTML com recursos embutidos e o ZIP editável, no mesmo formato das implantações que já funcionaram. Atualize essa branch para disparar a implantação de produção; `main` é a branch de código-fonte e, na configuração atual, gera apenas prévias.

@@ -35,9 +35,10 @@ function exportPage(input, output) {
     if (attribute === 'href' && value === '/') return 'href="carol-harder-preview.html"';
     return match;
   });
-  fs.writeFileSync(path.join('artifacts', output), html);
+  fs.writeFileSync(path.join('artifacts', output), html.replace(/[ \t]+$/gm, ''));
 }
 fs.mkdirSync('artifacts', { recursive: true });
 exportPage('index.html', 'carol-harder-preview.html');
 exportPage('privacidade.html', 'carol-harder-privacidade.html');
+exportPage('links.html', 'links.html');
 console.log('Prévias exportadas com fontes, imagens e módulos locais embutidos em artifacts/.');

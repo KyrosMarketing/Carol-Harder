@@ -1,0 +1,82 @@
+/* Paleta e Rubik do manual; estilos exclusivos da página /links. */
+:root {
+  --paper: #FEFAF1;
+  --ink: #353535;
+  --olive: #546847;
+  --sage: #B8C5BC;
+  --terracotta: #A5491C;
+}
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  min-height: 100vh;
+  min-height: 100svh;
+  display: grid;
+  place-items: center;
+  padding: max(28px, env(safe-area-inset-top)) max(20px, env(safe-area-inset-right)) max(28px, env(safe-area-inset-bottom)) max(20px, env(safe-area-inset-left));
+  background: var(--paper);
+  color: var(--ink);
+  font: 400 15px/1.55 'Rubik', Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+.bio-page { width: 100%; max-width: 440px; text-align: center; }
+.bio-logo { display: block; width: 112px; height: auto; margin: 0 auto 17px; }
+h1, p { margin: 0; }
+h1 { color: var(--olive); font-size: 28px; line-height: 1.2; font-weight: 400; letter-spacing: -.04em; }
+.bio-professional { margin-top: 8px; font-size: 14px; color: var(--olive); }
+.bio-crp { white-space: nowrap; font-weight: 500; }
+.bio-description { max-width: 350px; margin: 13px auto 0; font-size: 14px; text-wrap: balance; }
+.bio-links { display: grid; gap: 12px; margin-top: 26px; }
+.bio-button {
+  display: grid;
+  grid-template-columns: 26px minmax(0, 1fr) 18px;
+  gap: 12px;
+  align-items: center;
+  min-height: 62px;
+  padding: 15px 18px;
+  border: 1px solid var(--sage);
+  border-radius: 8px;
+  background: transparent;
+  color: var(--olive);
+  text-decoration: none;
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 1.4;
+  touch-action: manipulation;
+  transition: background-color .2s ease, border-color .2s ease, transform .2s ease;
+}
+.bio-button-primary { background: var(--olive); border-color: var(--olive); color: var(--paper); }
+.bio-icon { display: block; width: 26px; height: 26px; }
+.bio-whatsapp { width: 27px; height: 27px; }
+.bio-arrow { width: 18px; height: 18px; }
+.bio-button:focus-visible { outline: 2px solid var(--terracotta); outline-offset: 5px; }
+.bio-button:active { transform: translateY(1px); background: var(--sage); color: var(--ink); }
+.bio-footer { margin-top: 26px; color: var(--olive); font-size: 12px; line-height: 1.8; }
+::selection { background: var(--sage); color: var(--ink); }
+@media (hover: hover) {
+  .bio-button:hover { background: var(--sage); border-color: var(--sage); color: var(--ink); transform: translateY(-2px); }
+  .bio-button-primary:hover { background: var(--terracotta); border-color: var(--terracotta); color: var(--paper); }
+}
+@media (min-width: 700px) {
+  body { padding-block: 48px; }
+  .bio-logo { width: 128px; margin-bottom: 22px; }
+  h1 { font-size: 32px; }
+  .bio-description { font-size: 15px; margin-top: 16px; }
+  .bio-links { margin-top: 32px; gap: 14px; }
+  .bio-button { min-height: 66px; font-size: 16px; }
+  .bio-footer { margin-top: 32px; }
+}
+@media (max-width: 359px) {
+  .bio-button { gap: 8px; padding-inline: 12px; font-size: 14px; }
+  .bio-professional { font-size: 13px; }
+}
+@media (prefers-reduced-motion: no-preference) {
+  .bio-header, .bio-links, .bio-footer { animation: bio-enter .6s cubic-bezier(.2,.65,.3,1) backwards; }
+  .bio-links { animation-delay: .07s; }
+  .bio-footer { animation-delay: .14s; }
+  @keyframes bio-enter { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
+}
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation: none !important; transition: none !important; }
+  .bio-button:hover, .bio-button:active { transform: none; }
+}

@@ -1,4 +1,8 @@
-ESPACAMENTO KYROS — 27/10/2026
+AJUSTE DA LOGO NO TOPO — 29/10/2026
 
-Fonte: 474e0446166862e36a4183a57e7a84c85a5a6609
-Unica alteracao: gap da assinatura reduzido de 12 para 8 px. Logo original, alinhamento vertical, tamanho, link e demais elementos preservados. Build/export e conferencias de geometria em 390 e 1440 px aprovados. Nenhuma outra alteracao no produto.
+Fonte: 4727f7619a505c7a689982a73cc875d6dd714150
+Única alteração: uma regra CSS aplicada apenas à imagem da logo no cabeçalho da landing page, ocultando a região inferior que contém Psicóloga. O nome Carol Harder e o símbolo permanecem intactos, nas mesmas posições e dimensões. O arquivo original da logo não foi editado; a imagem do rodapé e a logo do cabeçalho da página de privacidade continuam completas. Nenhuma outra alteração no produto.
+
+Build/export aprovados. Conferência em 390 e 1440 px: comparação de pixels mostra diferenças apenas na região da palavra removida; nome e navegação preservados. Geometria do cabeçalho e funcionamento ao rolar preservados. Todos os demais arquivos do produto permanecem byte a byte iguais ao commit anterior. Nenhuma suíte completa ou medição de desempenho foi repetida para esta alteração isolada.
+
+Envio à branch de produção do GitHub não comprova a conclusão da implantação no Cloudflare.

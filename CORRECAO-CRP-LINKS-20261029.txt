@@ -1,0 +1,12 @@
+CORREÇÃO DO CRP NA PÁGINA /links — 29/10/2026
+
+Fonte: 4705156009aa5f272b4932614059b97dd24aa720
+Branch de produção: ajustes-pontuais-20261026-5d13776.
+
+O Safari no iPhone pode reconhecer 08/19247 como número/data e inserir um link azul sublinhado. A página /links recebeu a meta format-detection telephone=no, date=no e uma regra CSS restrita a links dentro de .bio-crp para herdar a cor verde e remover o sublinhado. O número continua exatamente 08/19247. Nenhum texto, logo, espaçamento, botão, destino, evento ou outro elemento foi alterado. A landing page principal permanece intacta.
+
+Build e exportação passaram. Verificação no HTML autônomo: meta presente; versão de public idêntica à versão da raiz; simulando link inserido pelo detector, cor rgb(84,104,71) e sem sublinhado; texto e retângulo do CRP iguais antes/depois; três CTAs preservados, sem erros JavaScript. Não houve teste em iPhone real nem nova execução da suíte completa para este ajuste isolado.
+
+public/links.html acompanha links.html na branch de artefatos e entra na saída public com o comando do Cloudflare já confirmado. Sem mudanças de configuração. Os HTMLs principais da landing page e da privacidade permanecem byte a byte iguais.
+
+O envio ao GitHub será conferido. A conclusão do deploy no Cloudflare e a apresentação no iPhone não são comprovadas pelo push.

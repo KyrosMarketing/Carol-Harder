@@ -1,20 +1,12 @@
-PÁGINA DE LINKS — INTEGRAÇÃO COM O BUILD REAL DO CLOUDFLARE — 29/10/2026
+CORREÇÃO DO CRP NA PÁGINA /links — 29/10/2026
 
-Fonte: ea8c8db6633a170fe30afb8eb3d70038138dd052
-Produção: ajustes-pontuais-20261026-5d13776
-Rota: https://carolharder.com.br/links
+Fonte: 4705156009aa5f272b4932614059b97dd24aa720
+Branch de produção: ajustes-pontuais-20261026-5d13776.
 
-O usuário confirmou raiz vazia, saída public e o comando:
-mkdir -p public && cp carol-harder-preview.html public/index.html && sed 's/carol-harder-preview.html/index.html/g' carol-harder-privacidade.html > public/carol-harder-privacidade.html
+O Safari no iPhone pode reconhecer 08/19247 como número/data e inserir um link azul sublinhado. A página /links recebeu a meta format-detection telephone=no, date=no e uma regra CSS restrita a links dentro de .bio-crp para herdar a cor verde e remover o sublinhado. O número continua exatamente 08/19247. Nenhum texto, logo, espaçamento, botão, destino, evento ou outro elemento foi alterado. A landing page principal permanece intacta.
 
-A entrega inclui public/links.html diretamente na branch de artefatos. O comando mkdir -p não apaga a pasta, preservando a nova página ao copiar os HTMLs existentes. Assim, /links é incluída na saída publicada sem mudar comando de build, diretório, branch, DNS, domínio ou e-mail. O Cloudflare Pages oferece URLs limpas para arquivos HTML. A página independente tem fontes, logo e scripts embutidos e não depende de outros arquivos.
+Build e exportação passaram. Verificação no HTML autônomo: meta presente; versão de public idêntica à versão da raiz; simulando link inserido pelo detector, cor rgb(84,104,71) e sem sublinhado; texto e retângulo do CRP iguais antes/depois; três CTAs preservados, sem erros JavaScript. Não houve teste em iPhone real nem nova execução da suíte completa para este ajuste isolado.
 
-O exportador do projeto editável agora gera artifacts/public/links.html, idêntico a artifacts/links.html. Não colocar esse HTML gerado em public/ no código-fonte Vite, que já tem sua própria entrada links.html.
+public/links.html acompanha links.html na branch de artefatos e entra na saída public com o comando do Cloudflare já confirmado. Sem mudanças de configuração. Os HTMLs principais da landing page e da privacidade permanecem byte a byte iguais.
 
-Página criada anteriormente: paleta e logo oficiais intactas; Carol Harder, Psicóloga Clínica, CRP 08/19247; WhatsApp com mensagem da bio; site; Instagram confirmado psicologa.carol.harder; horário e atendimento online. Canonical /links e noindex, follow. Eventos locais preparados, sem coleta, GA4/GTM, cookies ou storage, conforme escolha do usuário.
-
-Validação desta integração: comando real executado duas vezes em pasta isolada; public/index.html permaneceu idêntico ao HTML anterior da landing page; a página de privacidade manteve exatamente a substituição sed já existente; public/links.html permaneceu idêntico à página de links já validada. A saída public foi servida localmente: /links, acesso direto e reload, página principal e privacidade, com e sem JavaScript, aprovados; sem erros ou recursos ausentes.
-
-Os 21 testes Playwright da entrega anterior passaram, incluindo os 14 da landing page e 7 da bio. Não houve alteração visual ou funcional adicional nem repetição da suíte completa nesta correção de empacotamento. HTMLs publicados anteriores, logo, screenshots e links.html da raiz permanecem byte a byte intactos.
-
-O push na branch de produção dispara o deploy automático configurado. A conclusão no Cloudflare e o acesso público a /links não são comprovados pelo push: o ambiente tem bloqueio de rede ao domínio antes de alcançar o site. Isso não indica indisponibilidade do site.
+O envio ao GitHub será conferido. A conclusão do deploy no Cloudflare e a apresentação no iPhone não são comprovadas pelo push.

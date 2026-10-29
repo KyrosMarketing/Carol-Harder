@@ -25,6 +25,8 @@ h1, p { margin: 0; }
 h1 { color: var(--olive); font-size: 28px; line-height: 1.2; font-weight: 400; letter-spacing: -.04em; }
 .bio-professional { margin-top: 8px; font-size: 14px; color: var(--olive); }
 .bio-crp { white-space: nowrap; font-weight: 500; }
+/* Mantém a cor do CRP se o iOS inserir um link de detecção automática. */
+.bio-crp a { color: inherit !important; text-decoration: none !important; }
 .bio-description { max-width: 350px; margin: 13px auto 0; font-size: 14px; text-wrap: balance; }
 .bio-links { display: grid; gap: 12px; margin-top: 26px; }
 .bio-button {

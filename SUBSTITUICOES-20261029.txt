@@ -1,0 +1,15 @@
+SUBSTITUIÇÕES PONTUAIS — CAROL HARDER — 29/10/2026
+
+Fonte: 2167f4cfd14dc2f66c53ac07e5c5ed4249f87bea
+Produção Cloudflare: ajustes-pontuais-20261026-5d13776.
+
+1. Primeira dobra: removido apenas Carol Harder do texto abaixo da foto, conforme esclarecimento do usuário. A marca da navegação permanece como estava; Psicóloga e CRP na legenda foram preservados.
+2. Segunda dobra: removida a identidade profissional do topo da coluna lateral e substituída pelo h3 Abordagem em Terapia Cognitivo-Comportamental. Assinatura inferior com nome, profissão e CRP também removida. Bio, fotografia, título principal e composição da seção preservados.
+3. Rodapé: logo horizontal substituída pela versão circular correspondente à referência enviada. Usado o arquivo original logos-16.PNG, já fornecido no ZIP de identidade visual, copiado sem edição para public/images/logo-footer.png. Dimensões 1419 × 1484, SHA256 b6b240fcb00bfb6885787c9aa2c2fe2b72e32559259a145f30c0938cf15157fa. Nenhuma recriação de marca ou edição de pixels.
+4. Bloco central do rodapé substituído por Contato, com WhatsApp +55 (41) 98864-0026, e-mail contato@carolharder.com.br e horário segunda a sexta, das 8h às 19h. Links de WhatsApp e mailto funcionais.
+
+Escopo de código: index.html, regras específicas em src/style.css e novo asset de logo. Nenhum outro arquivo de produto foi alterado. Navegação, demais seções, retratos, paleta, fontes, animações, privacidade, prévia de compartilhamento e crédito KYROS preservados.
+
+Validação: build/export aprovados. A suíte completa de 14 testes passou após as substituições de texto e contato. Após aplicar o asset final, seis testes de responsividade/acessibilidade em 360, 390, 768, 1024 e 1440 px e contato/privacidade passaram. HTML exportado conferido em 390 e 1440 px: remoções, subheading, telefone, e-mail, horário e logo original embutida verificados; sem overflow ou erros. Capturas revisadas visualmente. Sem nova medição Lighthouse.
+
+O envio ao GitHub será confirmado; a conclusão da implantação no Cloudflare é verificada separadamente.

@@ -33,7 +33,13 @@ Abra `artifacts/carol-harder-preview.html` em um navegador; o arquivo também po
 
 `links.html`, `src/links.css`, `src/links.js` e `src/links.config.js` compõem a página independente da bio. O Vite inclui `links.html` em `dist/`. No Cloudflare Pages, o HTML recebe a URL limpa `/links`, inclusive em acesso direto e atualização, sem roteador ou configuração de DNS. O exportador também gera `artifacts/links.html` autônomo, com a logo original e as fontes embutidas.
 
-Na branch de artefatos de produção, `links.html` precisa acompanhar os dois HTMLs existentes na pasta efetivamente publicada pelo build. Se o comando atual copia somente arquivos nomeados, inclua também `links.html` nessa cópia. Não substitua o comando atual sem conferir as configurações do Cloudflare.
+O build atual do Cloudflare, confirmado pelo usuário em 29/10/2026, usa raiz vazia e saída `public`, com este comando:
+
+```sh
+mkdir -p public && cp carol-harder-preview.html public/index.html && sed 's/carol-harder-preview.html/index.html/g' carol-harder-privacidade.html > public/carol-harder-privacidade.html
+```
+
+Esse comando preserva os arquivos já presentes em `public/`. Por isso, na branch de artefatos de produção, publique também `public/links.html`, gerado em `artifacts/public/links.html`. É uma cópia idêntica do HTML autônomo `artifacts/links.html`; não adicione o HTML exportado em `public/` no código-fonte do Vite, pois a entrada `links.html` já gera essa rota no build normal. Assim a rota entra na saída atual sem alterar o comando ou outras configurações do Cloudflare. A cópia na raiz da branch de artefatos pode continuar disponível para download, mas é `public/links.html` que esse deploy publica.
 
 O perfil `psicologa.carol.harder` foi confirmado pelo usuário em 29/10/2026. Os dados profissionais vêm da configuração existente no build; a mensagem do WhatsApp da bio é independente da mensagem da landing page. Nenhum conteúdo da landing page foi alterado para adicionar essa rota. A bio usa `noindex, follow`, sem mudar a política de indexação da página principal.
 

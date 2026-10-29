@@ -41,4 +41,8 @@ fs.mkdirSync('artifacts', { recursive: true });
 exportPage('index.html', 'carol-harder-preview.html');
 exportPage('privacidade.html', 'carol-harder-privacidade.html');
 exportPage('links.html', 'links.html');
+// O build atual do Cloudflare preserva public/ e copia apenas os HTMLs da LP.
+// Este arquivo entra em public/ na branch de artefatos, não no public/ do Vite.
+fs.mkdirSync(path.join('artifacts', 'public'), { recursive: true });
+fs.copyFileSync(path.join('artifacts', 'links.html'), path.join('artifacts', 'public', 'links.html'));
 console.log('Prévias exportadas com fontes, imagens e módulos locais embutidos em artifacts/.');

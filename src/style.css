@@ -389,7 +389,7 @@ dialog::backdrop { background: color-mix(in srgb, var(--ink) 60%, transparent); 
   .contact-inner .contact-caption { max-width: 29ch; margin-inline: auto; font-size: 12px; }
   .footer { padding-block: 45px 25px; }
   .footer-main { grid-template-columns: 1fr; gap: 30px; }
-  .footer-brand { width: 195px; }
+  .footer-brand { width: 160px; justify-self: center; }
   .footer-links { grid-column: 1; flex-wrap: wrap; gap: 4px 23px; }
   .footer-links a { min-height: 40px; }
   .footer-bottom { margin-top: 28px; padding-top: 18px; gap: 6px 20px; }
